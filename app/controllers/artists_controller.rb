@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
 	end
 
   def create
-    @post = Post.new(artist_params(:name, :bio))
+    @post = Post.create(artist_params)
     @artist.save
     redirect_to artist_path(@artist)
   end
