@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
 	end
 
   def create
-  @artist = SchoolClass.new
+  @artist = Artist.new
   @artist.name = params[:name]
   @artist.bio = params[:bio]
   @artist.save
