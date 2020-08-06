@@ -1,15 +1,15 @@
 class ArtistsController < ApplicationController
 
 	def new
-		@artists = Artist.new
+		@artist = Artist.new
 	end
 
   def create
-  @artists = SchoolClass.new
-  @artists.name = params[:name]
-  @artists.bio = params[:bio]
-  @artists.save
-  redirect_to artist_path(@artists)
+  @artist = SchoolClass.new
+  @artist.name = params[:name]
+  @artist.bio = params[:bio]
+  @artist.save
+  redirect_to artist_path(@artist)
 end
 
 end
